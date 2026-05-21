@@ -285,7 +285,7 @@ margin-bottom:10px;
 
 /* PRICE */
 #price { background: var(–warm); padding:48px 48px 88px; text-align:center; }
-.price-inner { max-width:680px;  margin:0 auto; }
+.price-inner { max-width:680px; margin:0 auto; }
 .price-rows { margin-top:48px; border-top:1px solid var(–border); }
 .price-row {
 display:flex;
@@ -470,20 +470,12 @@ letter-spacing:0.3em;
 color:#06C755;
 margin-bottom:16px;
 }
-.line-box .l-qr {
-width:160px; height:160px;
-background: var(–linen);
-border:1px solid var(–border);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:0.7rem;
-color:var(–sand);
-letter-spacing:0.1em;
-}
-.line-box .l-qr img {
-width:100%; height:100%;
-object-fit:contain;
+.line-box .l-text {
+font-family: ‘Shippori Mincho’, serif;
+font-size:0.92rem;
+color: var(–deep);
+line-height:2;
+text-align:center;
 }
 .line-box .l-note {
 margin-top:12px;
@@ -563,7 +555,7 @@ nav { padding:8px 12px; }
   <div class="hero-inner">
     <div class="hero-label">Relaxation &amp; Care</div>
 
-
+```
 <h1 class="hero-title">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="320" style="max-width:90vw;">
     <text x="95" y="178" text-anchor="middle" font-family="Apple Color Emoji,Segoe UI Emoji,sans-serif" font-size="52" transform="rotate(-45,95,178)">🌿</text>
@@ -588,7 +580,7 @@ nav { padding:8px 12px; }
 </div>
 
 <a href="#price" class="hero-cta"><span style="font-size:1.1rem;">🌱</span> 料金案内 <span style="font-size:1.1rem;">🌱</span></a>
-
+```
 
   </div>
 </section>
@@ -600,8 +592,8 @@ nav { padding:8px 12px; }
     <div class="section-label">Gallery</div>
     <div class="section-title">店内のご紹介</div>
     <div style="display:grid;grid-template-columns:1fr;gap:24px;margin-top:48px;max-width:860px;margin-left:auto;margin-right:auto;">
-      <div style="overflow:hidden;"><img src="IMG_2405.JPG" alt="施術スペース" style="width:100%;display:block;"></div>
-      <div style="overflow:hidden;"><img src="IMG_2406.JPG" alt="待合スペース" style="width:100%;display:block;"></div>
+      <div style="overflow:hidden;padding:16px;"><img src="IMG_2405.JPG" alt="施術スペース" style="width:100%;max-width:860px;display:block;margin:0 auto;"></div>
+      <div style="overflow:hidden;padding:16px;"><img src="IMG_2406.JPG" alt="待合スペース" style="width:100%;max-width:860px;display:block;margin:0 auto;"></div>
     </div>
   </div>
 </section>
@@ -760,7 +752,9 @@ nav { padding:8px 12px; }
       <div class="line-box">
         <span class="l-icon">💬</span>
         <span class="l-label">公式 LINE</span>
-        <div class="l-qr"><img src="data:image/png;base64,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" alt="LINE QR"></div>
+        <div class="l-text">
+          LINEでのご予約・<br>お問い合わせも<br>お気軽にどうぞ
+        </div>
         <span class="l-note">もみほぐし一休 公式LINE</span>
       </div>
     </div>
@@ -800,4 +794,4 @@ navOverlay.addEventListener('click', () => {
 </script>
 
 </body>
-				</html>
+</html>
