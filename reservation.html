@@ -28,8 +28,22 @@
 </head>
 <body>
   <iframe
+    id="statusFrame"
     src="https://script.google.com/macros/s/AKfycbxLAK79xWkER2EDjAXusO6L5NdiO7uPcW_z1mUZOpjIByWHuvA_u2fakx9dx7uXnpCYeg/exec"
     title="もみほぐし一休 予約空き状況"
   ></iframe>
+
+  <script>
+    // アプリが再びアクティブ（画面に表示された状態）になったら、
+    // 予約状況を最新の状態に自動更新する
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible") {
+        var frame = document.getElementById("statusFrame");
+        var baseUrl = "https://script.google.com/macros/s/AKfycbxLAK79xWkER2EDjAXusO6L5NdiO7uPcW_z1mUZOpjIByWHuvA_u2fakx9dx7uXnpCYeg/exec";
+        // キャッシュを避けるため毎回タイムスタンプ付きで再読み込み
+        frame.src = baseUrl + "?t=" + new Date().getTime();
+      }
+    });
+  </script>
 </body>
 </html>
